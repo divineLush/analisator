@@ -27,3 +27,11 @@ body {
 .font-secondary {
     font-family: 'Oswald', Helvetica, sans-serif;
 }
+
+@media (max-width: 1440px) {
+    /* код для десктопа */
+}
+
+@media (max-width: 360px) {
+    /* код для мобилы */
+}
