@@ -1,3 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald.ttf') format('opentype');
+    font-weight: normal;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato.ttf') format('opentype');
+    font-weight: normal;
+    font-size: normal;
+}
+
 body {
     color: red;
+}
+
+.font-primary {
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+.font-secondary {
+    font-family: 'Oswald', Helvetica, sans-serif;
 }
