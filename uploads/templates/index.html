@@ -6,11 +6,15 @@
 </head>
 <body class="font-primary">
     <header>
-        <h1 class="header-title text-center">АНАЛИЗАТОР</h1>
+        <h1 class="font-secondary header-title text-center mb-8">АНАЛИЗАТОР</h1>
     </header>
     <main>
-        контент
-        <!-- весь контент идёт сюда -->
+        <h2 class="text-center mb-20">проанализируйте состав продукта, отсканировав штрих-код</h2>
+        <img class="blob-mobile" src="{% static 'svg/mobile.svg'%}">
+        <div class="buttons">
+            <button class="btn color-white bg-blue mb-4 transform-scale slide-left">сканировать</button>
+            <button class="btn color-white bg-purple transform-scale slide-right">загрузить фото</button>
+        </div>
     </main>
 </body>
 </html>

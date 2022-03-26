@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Oswald';
-    src: url('../fonts/Oswald.ttf') format('opentype');
+    src: url('/static/fonts/Oswald.ttf') format('opentype');
     font-weight: normal;
     font-size: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('../fonts/Lato.ttf') format('opentype');
+    src: url('/static/fonts/Lato.ttf') format('opentype');
     font-weight: normal;
     font-size: normal;
 }
@@ -51,10 +51,118 @@ body {
     font-family: 'Oswald', Helvetica, sans-serif;
 }
 
+header {
+    padding: 1.6rem 0;
+    color: #ffffaf;
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+    padding: 4rem 0;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.mb-8 {
+    margin-bottom: 8rem;
+}
+
+.mb-20 {
+    margin-bottom: 20rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 3rem 6rem;
+    border: 0;
+    border-radius: 16px;
+    font-size: 4.8rem;
+    font-family: 'Oswald', Helvetica, sans-serif;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.blob-mobile {
+    position: fixed;
+    top: 75%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: slideIn 1s ease;
+}
+
+.transform-scale {
+    transition: transform .4s ease;
+}
+
+.transform-scale:hover,
+.transform-scale:focus {
+    transform: scale(1.1);
+}
+
+.color-white {
+    color: #fff;
+}
+
+.bg-blue {
+    background: #5F87AF;
+}
+
+.bg-purple {
+    background: #5F5F87;
+}
+
+.slide-left {
+    animation: slideLeft .8s ease;
+}
+
+.slide-right {
+    animation: slideRight .8s ease;
+}
+
 @media (max-width: 1440px) {
     /* код для десктопа */
 }
 
 @media (max-width: 360px) {
     /* код для мобилы */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translate(-70%, -70%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(20%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
