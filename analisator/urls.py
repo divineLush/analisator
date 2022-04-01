@@ -20,4 +20,5 @@ from uploads import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='homepage'),
+    path('result', views.result, name='result'),
 ]
