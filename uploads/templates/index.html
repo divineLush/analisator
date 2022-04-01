@@ -2,16 +2,24 @@
 <head>
     <title>My Awesome Site</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
-<body class="font-primary">
+<body class="font-secondary">
     <header>
-        <h1 class="font-secondary header-title text-center mb-8">АНАЛИЗАТОР</h1>
+        <h1 class="font-secondary color-yellow header-title text-center">АНАЛИЗАТОР</h1>
     </header>
     <main>
-        <h2 class="text-center mb-20">проанализируйте состав продукта, отсканировав штрих-код</h2>
-        <img class="blob-mobile" src="{% static 'svg/mobile.svg'%}">
-        <div class="buttons">
+        <h2 class="text-center">проанализируйте состав продукта, отсканировав штрих-код</h2>
+        <div class="desktop-blobs-container">
+            <button class="btn-text color-white _first">СКАНИРОВАТЬ</button>
+            <img class="blob-desktop _first" src="{% static 'svg/desktop-0.svg'%}">
+            <button class="btn-text color-white _second">ЗАГРУЗИТЬ ФОТО</button>
+            <img class="blob-desktop _second" src="{% static 'svg/desktop-1.svg'%}">
+        </div>
+
+        <img class="blob-mobile mobile-only" src="{% static 'svg/mobile.svg'%}">
+        <div class="buttons mobile-only">
             <button class="btn color-white bg-blue mb-4 transform-scale slide-left">сканировать</button>
             <button class="btn color-white bg-purple transform-scale slide-right">загрузить фото</button>
         </div>

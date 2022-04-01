@@ -1,79 +1,3 @@
-@font-face {
-    font-family: 'Oswald';
-    src: url('/static/fonts/Oswald.ttf') format('opentype');
-    font-weight: normal;
-    font-size: normal;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('/static/fonts/Lato.ttf') format('opentype');
-    font-weight: normal;
-    font-size: normal;
-}
-
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    box-sizing: border-box;
-    background: #1c1c1c;
-    color: #fff;
-    font-size: 2.2rem;
-}
-
-.m-0 {
-    margin: 0;
-}
-
-.p-0 {
-    padding: 0;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.font-primary {
-    font-family: 'Lato', Arial, sans-serif;
-}
-
-.font-secondary {
-    font-family: 'Oswald', Helvetica, sans-serif;
-}
-
-header {
-    padding: 1.6rem 0;
-    color: #ffffaf;
-    font-size: 3.2rem;
-}
-
-h2 {
-    font-size: 4.2rem;
-    padding: 4rem 0;
-}
-
-.mb-4 {
-    margin-bottom: 4rem;
-}
-
-.mb-8 {
-    margin-bottom: 8rem;
-}
-
-.mb-20 {
-    margin-bottom: 20rem;
-}
-
 .buttons {
     display: flex;
     flex-direction: column;
@@ -89,6 +13,32 @@ h2 {
     font-family: 'Oswald', Helvetica, sans-serif;
     width: fit-content;
     cursor: pointer;
+}
+
+.desktop-blobs-container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 4rem auto 0;
+    position: relative;
+}
+
+.blob-desktop {
+    max-width: 500px;
+    position: absolute;
+    z-index: -1;
+    transition: transform .6s ease;
+}
+
+.blob-desktop._first {
+    top: 0;
+    left: 10%;
+    animation: slideRight 1s ease;
+}
+
+.blob-desktop._second {
+    top: 0;
+    right: 10%;
+    animation: slideLeft 1s ease;
 }
 
 .blob-mobile {
@@ -113,6 +63,10 @@ h2 {
     color: #fff;
 }
 
+.color-yellow {
+    color: #ffffaf;
+}
+
 .bg-blue {
     background: #5F87AF;
 }
@@ -129,12 +83,30 @@ h2 {
     animation: slideRight .8s ease;
 }
 
-@media (max-width: 1440px) {
-    /* код для десктопа */
+.mobile-only {
+    display: none;
 }
 
-@media (max-width: 360px) {
-    /* код для мобилы */
+.btn-text {
+    background: transparent;
+    padding: 2rem;
+    border: 0;
+    font-size: 3.6rem;
+    position: absolute;
+}
+
+.btn-text:hover + .blob-desktop {
+    transform: scale(1.1);
+}
+
+.btn-text._first {
+    top: 115px;
+    left: 15%;
+}
+
+.btn-text._second {
+    top: 165px;
+    right: 15%;
 }
 
 @keyframes slideIn {
