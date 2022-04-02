@@ -78,9 +78,3 @@ h2 {
 .mb-20 {
     margin-bottom: 20rem;
 }
-
-@media (max-width: 768px) {
-    body {
-        background-color: red;
-    }
-}
